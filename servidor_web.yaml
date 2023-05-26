@@ -1,0 +1,27 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: sv-web
+  labels:
+    name: sv-web
+    app: sv-web
+spec:
+  selector:
+    matchLabels:
+      app: sv-web
+  template:
+    metadata:
+      name: sv-web
+      labels:
+        name: sv-web
+        app: sv-web
+    spec:
+      containers:
+        - name: sv-web
+          image: nginx
+  replicas: 3
+
+
+
+
+    
